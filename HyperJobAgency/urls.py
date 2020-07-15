@@ -16,8 +16,10 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from mainapp.views import MainPageView
+from resume.views import ResumesView
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', MainPageView.as_view())
+    path('', MainPageView.as_view()),
+    path("resumes/", ResumesView.as_view())
 ]

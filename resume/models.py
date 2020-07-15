@@ -7,3 +7,7 @@ from django.contrib.auth.models import User
 class Resume(models.Model):
     description = CharField(max_length=1024)
     author = ForeignKey(User, on_delete=models.CASCADE)
+
+
+def get_all_resumes():
+    return Resume.objects.all()
