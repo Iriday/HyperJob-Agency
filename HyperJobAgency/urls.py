@@ -17,9 +17,11 @@ from django.contrib import admin
 from django.urls import path
 from mainapp.views import MainPageView
 from resume.views import ResumesView
+from vacancy.views import VacanciesView
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', MainPageView.as_view()),
-    path("resumes/", ResumesView.as_view())
+    path("resumes/", ResumesView.as_view()),
+    path("vacancies/", VacanciesView.as_view())
 ]
