@@ -15,8 +15,8 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from mainapp.views import MainPageView
-from resume.views import ResumesView
+from mainapp.views import MainPageView, ProfileView
+from resume.views import ResumesView, NewResumeView
 from vacancy.views import VacanciesView
 from reg_and_auth.views import MySignupView, MyLoginView
 from django.contrib.auth.views import LogoutView
@@ -25,7 +25,9 @@ from django.views.generic import RedirectView
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', MainPageView.as_view()),
+    path("home/", ProfileView.as_view()),
     path("resumes/", ResumesView.as_view()),
+    path("resume/new", NewResumeView.as_view()),
     path("vacancies/", VacanciesView.as_view()),
 
     path("signup", MySignupView.as_view()),

@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>New resume</title>
+</head>
+<body>
+<form method="post" action="/resume/new">{% csrf_token %}
+    <div>Enter resume:</div>
+    <input type="text" name="description"><br>
+    <button type="submit">Send</button>
+</form>
+</body>
+</html>
