@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>New vacancy</title>
+</head>
+<body>
+<form method="post" action="/vacancy/new">{% csrf_token %}
+    <div>Enter vacancy:</div>
+    <input type="text" name="description"><br>
+    <button type="submit">Send</button>
+</form>
+</body>
+</html>
